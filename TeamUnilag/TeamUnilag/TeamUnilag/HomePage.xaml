@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TeamUnilag.HomePage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White" x:Name="parent">
+            <RelativeLayout x:Name="staticControls">
+
+                <StackLayout x:Name="mapLayout"  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=1,Constant=0}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Height,Factor=1,Constant=0}"/>
+
+                <Button x:Name="connectBtn" BackgroundColor="#783A7C" Text="Connect Stick" TextColor="White" 
+                    FontAttributes="Bold" FontFamily="Roboto" FontSize="20" BorderColor="White" BorderWidth="1"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.5,Constant=0}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Height,Factor=.25,Constant=0}"
+                        Clicked="connectBtn_Clicked"/>
+
+                <Button x:Name="locationBtn" BackgroundColor="#783A7C" Text="My Location" TextColor="White" 
+                    FontAttributes="Bold" FontFamily="Roboto" FontSize="20" BorderColor="White" BorderWidth="1"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.5,Constant=0}"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.5,Constant=0}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Height,Factor=.25,Constant=0}"
+                        Clicked="locationBtn_Clicked"/>
+
+                <Label x:Name="modeTxt" Text="Mode:Offline" TextColor="Red" />
+
+                <Button x:Name="destinationBtn" BackgroundColor="#783A7C" Text="My Destination" TextColor="White" 
+                    FontAttributes="Bold" FontFamily="Roboto" FontSize="20" BorderColor="White" BorderWidth="1"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Height, Factor=.75,Constant=0}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.5,Constant=0}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Height,Factor=.25,Constant=0}"
+                        Clicked="destinationBtn_Clicked"/>
+
+                <Button x:Name="helpBtn" BackgroundColor="#783A7C" Text="Help" TextColor="White" 
+                    FontAttributes="Bold" FontFamily="Roboto" FontSize="20" BorderColor="White" BorderWidth="1"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.5,Constant=0}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Height, Factor=.75,Constant=0}"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.5,Constant=0}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Height,Factor=.25,Constant=0}"
+                        Clicked="helpBtn_Clicked"/>
+
+
+                <StackLayout x:Name="homeTxtLayout" Padding="10" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Height, Factor=.25, Constant=0}"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.25,Constant=0}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Height, Factor=.5, Constant=0}">
+                    <ScrollView Orientation="Both">
+                        <Label Text="Smart Walking Stick App" LineBreakMode="WordWrap" FontFamily="Trebuchet MS" Font="35" 
+                       TextColor="#783A7C" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                        <Label Text="Please connect phone to stick" FontFamily="Tw Cen MT" Font="15" 
+                       TextColor="#783A7C" FontAttributes="Italic" HorizontalTextAlignment="Center"/>
+
+                        <Label x:Name="directionlabel" Text="Directions:" HorizontalOptions="Center"/>
+                    </ScrollView>
+                </StackLayout>
+                <StackLayout x:Name="connectingLayout" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=.25,Constant=0}">
+                    <ActivityIndicator x:Name="isConnecting" IsRunning="True" WidthRequest="30"/>
+                    <Label x:Name="connectingTxt" Text="Connecting" FontFamily="Tw Cen MT" Font="15" 
+                       TextColor="#783A7C" FontAttributes="Italic" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>
+                </StackLayout>
+
+            </RelativeLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

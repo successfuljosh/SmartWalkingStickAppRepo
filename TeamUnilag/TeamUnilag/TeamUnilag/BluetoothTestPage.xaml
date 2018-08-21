@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TeamUnilag.BluetoothTestPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="scan" x:Name="scan" />
+            <Button Text="Status" x:Name="status" />
+            <Button x:Name="connect" Text="connect" />
+            <Button x:Name="record" Text="Record"/>
+            <Button x:Name="play" Text="Play file"/>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

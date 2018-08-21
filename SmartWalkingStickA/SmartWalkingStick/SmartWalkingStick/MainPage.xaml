@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SmartWalkingStick"
+             x:Class="SmartWalkingStick.MainPage">
+
+        <StackLayout BackgroundColor="White" >
+            <!-- Place new controls here -->
+            <Grid>
+             
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+        
+                <Button x:Name="connectBtn" BackgroundColor="#783A7C" Text="Connect Stick" TextColor="White" 
+                    FontAttributes="Bold" FontFamily="Roboto" FontSize="20" VerticalOptions="FillAndExpand"
+                    Grid.Row="0" Grid.Column="0"/>
+                <Button x:Name="locationBtn"  BackgroundColor="#783A7C" Text="My Location" TextColor="White" 
+                    FontAttributes="Bold" FontFamily="Roboto" FontSize="20"
+                    Grid.Row="0" Grid.Column="2"/>
+                <Button x:Name="destinationBtn" BackgroundColor="#783A7C" Text="My Destination" TextColor="White" 
+                    FontAttributes="Bold" FontFamily="Roboto" FontSize="20"
+                    Grid.Row="3" Grid.Column="0"/>
+                <Button x:Name="helpBtn"  BackgroundColor="#783A7C" Text="Help" TextColor="White" 
+                    FontAttributes="Bold" FontFamily="Roboto" FontSize="20"
+                    Grid.Row="3" Grid.Column="2"/>
+                <Label x:Name="modeTxt" Text="Mode: Offline" TextColor="Red" FontFamily="Roboto" FontSize="10"
+                   Grid.Row="0" Grid.Column="1" />
+                <StackLayout Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="3"
+                         HorizontalOptions="Center" VerticalOptions="FillAndExpand">
+                    <Label Text="Smart Walking Stick App" LineBreakMode="WordWrap" FontFamily="Trebuchet MS" Font="35" 
+                       TextColor="#783A7C" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                    <Label Text="Please connect phone to stick" FontFamily="Tw Cen MT" Font="15" 
+                       TextColor="#783A7C" FontAttributes="Italic" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+        </Grid>
+        </StackLayout>
+
+</ContentPage>
